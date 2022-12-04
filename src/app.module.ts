@@ -3,8 +3,8 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as Joi from 'joi';
 
-import { Log } from './logs/entities/log.entity';
-import { LogsModule } from './logs/logs.module';
+import { Log } from './logsFlow/entities/log.entity';
+import { LogsFlowModule } from './logsFlow/logsFlow.module';
 
 @Module({
   imports: [
@@ -25,7 +25,7 @@ import { LogsModule } from './logs/logs.module';
         process.env.NODE_ENV !== 'prod' && process.env.NODE_ENV !== 'test',
       entities: [Log],
     }),
-    LogsModule,
+    LogsFlowModule,
   ],
   controllers: [],
   providers: [],
