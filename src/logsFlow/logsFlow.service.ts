@@ -28,7 +28,7 @@ export class LogsFlowService {
 
       return { ok: true };
     } catch (err) {
-      return { ok: false, error: 'Cannot create the log' };
+      return { ok: false, error: `Cannot create the log, ${err}` };
     }
   }
 }
